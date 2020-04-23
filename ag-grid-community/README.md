@@ -5,7 +5,7 @@ cljsjs/ag-grid-community:
 
 [](dependency)
 ```clojure
-[cljsjs/ag-grid-community "21.0.1-1"] ;; latest release
+[cljsjs/ag-grid-community "23.0.2-1"] ;; latest release
 ```
 [](/dependency)
 
