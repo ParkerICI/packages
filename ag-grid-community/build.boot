@@ -8,8 +8,8 @@
          '[boot.util :refer [dosh]]
          '[clojure.java.io :as io])
 
-(def +lib-version+ "23.0.2")
-(def +lib-checksum+ "4883CA6B3D3147963FDBA015BE6E3B57")
+(def +lib-version+ "23.2.1")
+(def +lib-checksum+ "49061E92C1DF947061D1E2E96676DB9D")
 (def +version+ (str +lib-version+ "-1"))
 (def +lib-folder+ (format "ag-grid-community-%s" +lib-version+))
 

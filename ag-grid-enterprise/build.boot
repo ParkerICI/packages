@@ -1,15 +1,15 @@
 (set-env!
  :resource-paths #{"resources"}
  :dependencies '[[cljsjs/boot-cljsjs "0.10.5" :scope "test"]
-                 [cljsjs/ag-grid-community "19.0.0-0"]])
+                 [cljsjs/ag-grid-community "23.2.1-1"]])
 
 (require '[cljsjs.boot-cljsjs.packaging :refer :all]
          '[boot.core :as boot]
          '[boot.tmpdir :as tmpdir]
          '[clojure.java.io :as io])
 
-(def +lib-version+ "23.0.2")
-(def +lib-checksum+ "4883CA6B3D3147963FDBA015BE6E3B57")
+(def +lib-version+ "23.2.1")
+(def +lib-checksum+ "49061E92C1DF947061D1E2E96676DB9D")
 (def +version+ (str +lib-version+ "-0"))
 (def +lib-folder+ (format "ag-grid-%s/packages/ag-grid-enterprise" +lib-version+))
 
