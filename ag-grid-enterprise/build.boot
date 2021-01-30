@@ -8,9 +8,8 @@
          '[boot.tmpdir :as tmpdir]
          '[clojure.java.io :as io])
 
-(def +lib-version+ "23.2.1")
-(def +lib-checksum+ "49061E92C1DF947061D1E2E96676DB9D")
-(def +version+ (str +lib-version+ "-0"))
+(def +lib-version+ "25.0.1")
+(def +version+ (str +lib-version+ "-1"))
 (def +lib-folder+ (format "ag-grid-%s/packages/ag-grid-enterprise" +lib-version+))
 
 (task-options!
@@ -23,7 +22,6 @@
 
 (deftask download-lib []
   (download :url (format "https://github.com/ag-grid/ag-grid/archive/v%s.zip" +lib-version+)
-            :checksum +lib-checksum+
             :unzip true))
 
 (deftask package []
@@ -37,4 +35,5 @@
    (deps-cljs :name "cljsjs.ag-grid-enterprise"
               :requires ["cljsjs.ag-grid-community"])
    (pom)
-   (jar)))
+   (jar)
+   (validate-checksums)))

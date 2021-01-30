@@ -11,9 +11,8 @@
          '[boot.util :refer [dosh]]
          '[clojure.java.io :as io])
 
-(def +lib-version+ "23.2.1")
-(def +lib-checksum+ "49061E92C1DF947061D1E2E96676DB9D")
-(def +version+ (str +lib-version+ "-1"))
+(def +lib-version+ "25.0.1")
+(def +version+ (str +lib-version+ "-2"))
 (def +lib-folder+ (format "ag-grid-%s/grid-packages/ag-grid-react" +lib-version+))
 
 (defn- dosh-cmd [& args]
@@ -34,7 +33,6 @@
 
 (deftask download-lib []
   (download :url (format "https://github.com/ag-grid/ag-grid/archive/v%s.zip" +lib-version+)
-            :checksum +lib-checksum+
             :unzip true))
 
 (deftask build []
@@ -68,4 +66,5 @@
                          "cljsjs.react.dom"
                          "cljsjs.ag-grid-community"])
    (pom)
-   (jar)))
+   (jar)
+   (validate-checksums)))
